@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  background-color: #e8e8e8;
+}
+
+.navbar {
+  grid-row: 1;
+  background-color: #fff;
+}
+
+.navbar img {
+  width: 50px;
+}
+
+.main {
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.articulo {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.articulo h2 {
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+
+.article__btn-info {
+  background-color: #3d48e3;
+  color: #fff;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.3rem 0rem;
+  font-weight: 600;
+  width: 40%;
+  min-width: 300px;
+}
+
+.articulo img {
+  width: 100%;
+}
+
+.section-mas {
+  background-color: #3de3e0;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-mas h2 {
+  color: #fff;
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.section__contein {
+  display: grid;
+  grid-template-rows: repeat(1, 1fr);
+  gap: 0.5rem;
+}
+
+.section__articulo {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.section__articulo h3 {
+  font-weight: 600;
+}
+
+.section__articulo p {
+  font-size: 0.7rem;
+}
+
+.section__articulo a {
+  font-size: 0.7rem;
+  text-decoration: none;
+}
+
+.section__articulo img {
+  height: 180px;
+  width: 100%;
+  object-fit: contain;
+}
+
+.footer {
+  grid-row: 3;
+  color: #7e7e7e;
+  font-size: 0.7rem;
+  padding: 2rem;
+}
+
+.footer__redes {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0;
+}
+
+.footer__manInf {
+  text-align: center;
+  margin-bottom: 1.3rem;
+}
+
+.footer__redes img {
+  width: 30px;
+}
+
+.footer a {
+  color: #000;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer a:visited {
+  color: #000;
+}
+
+@media (min-width: 900px) {
+  .main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .section-mas {
+    grid-column: 1/4;
+  }
+
+  .section__articulo {
+    grid-row: 1/2;
+    width: auto;
+  }
+
+  .footer__redes {
+    justify-content: flex-start;
+    gap: 2rem;
+  }
+
+  .footer__manInf {
+    text-align: start;
+  }
+}
